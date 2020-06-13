@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="cool:war exploded">
+    <output-path>D:/IdeaProjects/web/2_end_test/artifacts/cool_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="cool/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="cool" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
