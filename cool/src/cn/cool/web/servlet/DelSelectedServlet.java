@@ -17,7 +17,7 @@ public class DelSelectedServlet extends HttpServlet {
         String[] uids = request.getParameterValues("uid");
         UserService userService=new UserServiceImpl();
         userService.delSelectedUser(uids);
-        response.sendRedirect(request.getContextPath()+"/userListServlet");
+        response.sendRedirect(request.getContextPath()+"/findUserByPageServlet");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
