@@ -30,58 +30,58 @@
     <script src="js/bootstrap.min.js"></script>
     <script>
         function checkName(){
-            //1.获取用户名的值
-            var name = $("#name").val();
-            //2.定义正则
-            var reg_param=/^[\u4e00-\u9fa5]{2,4}$/;
-            //3.判断，给出提示信息
-            var flag = reg_param.test(name);
-            if(flag){
-                $("#name").css("border","");
-            }else{
-                //用户名非法，加一个红色的边框
-                $("#name").css("border","red solid 2px");
+                //1.获取用户名的值
+                var name = $("#name").val();
+                //2.定义正则
+                var reg_param=/^[\u4e00-\u9fa5]{2,4}$/;
+                //3.判断，给出提示信息
+                var flag = reg_param.test(name);
+                if(flag){
+                    $("#name").css("border","");
+                }else{
+                    //用户名非法，加一个红色的边框
+                    $("#name").css("border","red solid 2px");
+                }
+                return flag;
             }
-            return flag;
-        }
-        function checkAge(){
-            //1.获取用户名的值
-            var age = $("#age").val();
-            //2.定义正则
-            var reg_param=/^\d{1,3}$/;
-            //3.判断，给出提示信息
-            var flag = reg_param.test(age);
-            if(flag){
-                $("#age").css("border","");
-            }else{
-                //用户名非法，加一个红色的边框
-                $("#age").css("border","red solid 2px");
-            }
-            return flag;
-        }
-        function checkQq(){
-            //1.获取用户名的值
-            var qq = $("#qq").val();
-            //2.定义正则
-            var reg_param=/^\d{5,15}$/;
-            //3.判断，给出提示信息
-            var flag = reg_param.test(qq);
-            if(flag){
-                $("#qq").css("border","");
-            }else{
-                //用户名非法，加一个红色的边框
-                $("#qq").css("border","red solid 2px");
-            }
-            return flag;
-        }
-        function checkEmail(){
-            //1.获取用户名的值
-            var email = $("#email").val();
-            //2.定义正则
-            var reg_param=/^\w{3,12}@\w{1,5}\.[a-z]{2,3}$/;
-            //3.判断，给出提示信息
-            var flag = reg_param.test(email);
-            if(flag){
+                function checkAge(){
+                    //1.获取用户名的值
+                    var age = $("#age").val();
+                    //2.定义正则
+                    var reg_param=/^\d{1,3}$/;
+                    //3.判断，给出提示信息
+                    var flag = reg_param.test(age);
+                    if(flag){
+                        $("#age").css("border","");
+                    }else{
+                        //用户名非法，加一个红色的边框
+                        $("#age").css("border","red solid 2px");
+                    }
+                    return flag;
+                }
+                function checkQq(){
+                    //1.获取用户名的值
+                    var qq = $("#qq").val();
+                    //2.定义正则
+                    var reg_param=/^\d{5,15}$/;
+                    //3.判断，给出提示信息
+                    var flag = reg_param.test(qq);
+                    if(flag){
+                        $("#qq").css("border","");
+                    }else{
+                        //用户名非法，加一个红色的边框
+                        $("#qq").css("border","red solid 2px");
+                    }
+                    return flag;
+                }
+                function checkEmail(){
+                    //1.获取用户名的值
+                    var email = $("#email").val();
+                    //2.定义正则
+                    var reg_param=/^\w{3,12}@\w{1,5}\.[a-z]{2,3}$/;
+                    //3.判断，给出提示信息
+                    var flag = reg_param.test(email);
+                    if(flag){
                 $("#email").css("border","");
             }else{
                 //用户名非法，加一个红色的边框
@@ -90,11 +90,12 @@
             return flag;
         }
         $(function () {
-            //2.当某个组件失去焦点，调用校验方法
+            //当某个组件失去焦点，调用校验方法
             $("#name").blur(checkName);
             $("#age").blur(checkAge);
             $("#qq").blur(checkQq);
             $("#email").blur(checkEmail);
+
 
         });
     </script>
@@ -141,7 +142,6 @@
         <div class="form-group" style="text-align: center">
             <input class="btn btn-primary" type="submit" value="提交" />
             <input class="btn btn-default" type="reset" value="重置" />
-            <input class="btn btn-default" type="button" value="返回" />
         </div>
     </form>
 </div>

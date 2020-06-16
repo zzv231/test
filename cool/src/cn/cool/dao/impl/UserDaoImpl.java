@@ -14,12 +14,6 @@ import java.util.Set;
 
 public class UserDaoImpl implements UserDao {
     private JdbcTemplate template=new JdbcTemplate(JDBCUtils.getDataSource());
-    @Override
-    public List<User> findAll() {
-        String sql="select * from user";
-        List<User> users = template.query(sql, new BeanPropertyRowMapper<User>(User.class));
-        return users;
-    }
 
     @Override
     public User findUsernameAndPassword(String username, String password) {

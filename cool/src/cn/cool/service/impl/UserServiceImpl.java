@@ -11,11 +11,7 @@ import java.util.Map;
 
 public class UserServiceImpl implements UserService {
     private UserDao userDao=new UserDaoImpl();
-    @Override
-    public List<User> findAll() {
-        List<User> list = userDao.findAll();
-        return list;
-    }
+
 
     @Override
     public User login(User user) {
