@@ -37,7 +37,7 @@
                 //3.判断，给出提示信息
                 var flag = reg_param.test(name);
                 if(flag){
-                    $("#name").css("border","");
+                    $("#name").HTML="<img  src='img/dui.png'>"
                 }else{
                     //用户名非法，加一个红色的边框
                     $("#name").css("border","red solid 2px");
@@ -52,7 +52,7 @@
                     //3.判断，给出提示信息
                     var flag = reg_param.test(age);
                     if(flag){
-                        $("#age").css("border","");
+
                     }else{
                         //用户名非法，加一个红色的边框
                         $("#age").css("border","red solid 2px");
@@ -90,12 +90,14 @@
             return flag;
         }
         $(function () {
+            $("#submit").click(function () {
+                return checkName()&&checkAge()&&checkQq()&&checkEmail();
+            });
             //当某个组件失去焦点，调用校验方法
             $("#name").blur(checkName);
             $("#age").blur(checkAge);
             $("#qq").blur(checkQq);
             $("#email").blur(checkEmail);
-
 
         });
     </script>
@@ -140,7 +142,7 @@
         </div>
 
         <div class="form-group" style="text-align: center">
-            <input class="btn btn-primary" type="submit" value="提交" />
+            <input id="submit" class="btn btn-primary" type="submit" value="提交" />
             <input class="btn btn-default" type="reset" value="重置" />
         </div>
     </form>
